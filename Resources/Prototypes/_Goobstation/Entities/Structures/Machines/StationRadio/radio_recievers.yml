@@ -46,6 +46,8 @@
   #- type: ActiveRadio
   #  channels:
   #  - RadioShow
+  - type: Machine
+    board: StationRadioCircuitboard
   - type: DeviceNetwork
     receiveAll: true
     deviceNetId: Wireless

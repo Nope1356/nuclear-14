@@ -11,18 +11,6 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Vinyl player
-
-- type: sourcePort
-  id: VinylPlayerPort
-  name: signal-port-name-vinyl-player
-  description: signal-port-description-vinyl-player
-
-- type: sourcePort
-  id: StationRadioServerPort
-  name: signal-port-name-radio-server
-  description: signal-port-description-radio-server
-
 # Station Radio
 
 - type: sourcePort

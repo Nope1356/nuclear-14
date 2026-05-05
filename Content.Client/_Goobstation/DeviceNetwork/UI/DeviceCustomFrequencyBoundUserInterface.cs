@@ -12,7 +12,7 @@
 using Content.Goobstation.Shared.DeviceNetwork;
 using Robust.Client.UserInterface;
 
-namespace Content.Goobstation.Client.DeviceNetwork.UI;
+namespace Content.Client._Goobstation.DeviceNetwork.UI;
 
 public sealed class DeviceCustomFrequencyBoundUserInterface : BoundUserInterface
 {

@@ -236,10 +236,10 @@ namespace Content.Server.DeviceNetwork.Systems
         {
             if (Resolve(uid, ref device, false))
             {
-                var oldFrequency = device.ReceiveFrequency; // Goobstation
+                var oldFrequency = device.TransmitFrequency; // Goobstation
                 device.TransmitFrequency = frequency;
                 // Goobstation start
-                var ev = new DeviceNetworkTransmitFrequencyChangedEvent(oldFrequency, device.ReceiveFrequency);
+                var ev = new DeviceNetworkTransmitFrequencyChangedEvent(oldFrequency, device.TransmitFrequency);
                 RaiseLocalEvent(uid, ref ev);
                 // Goobstation end
             }

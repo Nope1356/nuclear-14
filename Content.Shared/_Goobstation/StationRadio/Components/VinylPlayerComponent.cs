@@ -23,7 +23,7 @@ public sealed partial class VinylPlayerComponent : Component
     /// Signal port that is sending out music data.
     /// </summary>
     [DataField]
-    public ProtoId<SourcePortPrototype> MusicOutputPort = "VynilMusic";
+    public ProtoId<SourcePortPrototype> MusicOutputPort = "VinylMusic";
 
     /// <summary>
     /// If true, will only play music and send packages if the structure is powered.

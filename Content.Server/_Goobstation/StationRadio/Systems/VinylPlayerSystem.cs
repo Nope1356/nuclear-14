@@ -10,8 +10,9 @@ using Robust.Shared.Audio.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
+using Content.Server.DeviceNetwork;
 
-namespace Content.Goobstation.Shared.StationRadio.Systems;
+namespace Content.Server._Goobstation.StationRadio.Systems;
 
 public sealed class VinylPlayerSystem : EntitySystem
 {
@@ -39,15 +40,16 @@ public sealed class VinylPlayerSystem : EntitySystem
 
     private void OnNewLink(Entity<VinylPlayerComponent> ent, ref NewLinkEvent args)
     {
-        if(!CheckForRadioRig(uid))
+        if (args.SourcePort != ent.Comp.MusicOutputPort)
             return;
 
         ent.Comp.ServerEntity = args.Sink;
     }
 
+
     private void OnDisconnect(Entity<VinylPlayerComponent> ent, ref PortDisconnectedEvent args)
     {
-        if(!CheckForRadioRig(uid))
+        if (args.Port != ent.Comp.MusicOutputPort)
             return;
 
         ent.Comp.ServerEntity = null;
@@ -82,7 +84,7 @@ public sealed class VinylPlayerSystem : EntitySystem
         if (audio != null)
             comp.SoundEntity = audio.Value.Entity;
 
-        if(!CheckForRadioRig(uid))
+        if (ent.Comp.ServerEntity == null)
             return;
 
         var payload = new NetworkPayload()
@@ -113,7 +115,7 @@ public sealed class VinylPlayerSystem : EntitySystem
     {
         _audio.SetState(ent.Comp.SoundEntity, state);
 
-        if(!CheckForRadioRig(uid))
+        if (ent.Comp.ServerEntity == null)
             return;
 
         var payload = new NetworkPayload()
@@ -123,35 +125,5 @@ public sealed class VinylPlayerSystem : EntitySystem
         };
 
         _link.InvokePort(ent.Owner, ent.Comp.MusicOutputPort, payload);
-    }
-
-    private bool CheckForRadioRig(EntityUid uid)
-    {
-        if (TryComp<DeviceLinkSourceComponent>(uid, out var source))
-        {
-            foreach (var linked in source.LinkedPorts.Keys)
-            {
-                if (HasComp<RadioRigComponent>(linked) && CheckForRadioServer(linked))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private bool CheckForRadioServer(EntityUid uid)
-    {
-        if (TryComp<DeviceLinkSinkComponent>(uid, out var source))
-        {
-            foreach (var linked in source.LinkedSources)
-            {
-                if (HasComp<StationRadioServerComponent>(linked))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 }

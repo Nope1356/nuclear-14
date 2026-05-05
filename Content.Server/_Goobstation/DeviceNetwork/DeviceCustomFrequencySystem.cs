@@ -1,4 +1,5 @@
 ﻿using Content.Goobstation.Shared.DeviceNetwork;
+using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.UserInterface;
