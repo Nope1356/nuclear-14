@@ -4594,3 +4594,10 @@ Entries:
   id: 5833
   time: '2026-05-04T20:35:31.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/421
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: 'Added Legion PA textures made by @Nope1356 '
+  id: 5834
+  time: '2026-05-05T21:31:54.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/432
