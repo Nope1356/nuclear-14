@@ -25,6 +25,9 @@
   access:
   - VaultDweller
   - VaultSecurity
+  - VaultEngineer
+  - VaultMedical
+  - VaultChemistry
   special:
   - !type:AddComponentSpecial
     components:
