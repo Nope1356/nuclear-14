@@ -9,7 +9,6 @@
   name: c-27 humanoid robot
   id: N14BaseMobC27
   parent: BaseMobSpecies
-  abstract: true
   components:
   - type: HumanoidAppearance
     species: C27
@@ -57,9 +56,10 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Pai
-  - type: Vocal
+  - type: Vocal # Misfit change, robotic scream
+    wilhelm: "/Audio/Voice/IPC/wilhelm.ogg"
     sounds:
-      Unsexed: MaleHuman
+      Unsexed: UnisexIPC
   - type: TypingIndicator
     proto: robot
   - type: LanguageKnowledge # #Misfits Fix - use N14 language IDs (TauCetiBasic/RobotTalk are SS14 upstream only)
@@ -129,6 +129,8 @@
       - Shard
   # #Misfits Add (Phase F) - Welders restore Brute (uses upstream WeldingHealing on welders).
   - type: WeldingHealable
+   # #Misfits Adds natural welding protection.
+  - type: EyeProtection
   # #Misfits Add (Phase F) - Sleep self-repair / passive maintenance protocols. Heals all
   # supported damage groups slowly while alive or in crit. Combined with allowRevives this
   # also drives the auto-revive pull-out-of-crit loop the spec describes.
@@ -161,7 +163,6 @@
   id: N14MobC27
   parent: N14BaseMobC27
   description: A C-27 humanoid robot. Pre-war General Atomics workshop frame, retrofitted for Wasteland service.
-  categories: [ HideSpawnMenu ]
 
 # Dummy variant used by the character editor preview.
 - type: entity

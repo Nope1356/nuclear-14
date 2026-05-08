@@ -203,3 +203,18 @@
       min: 72000
   items:
     - N14ClothingNeckCloakLegionRed
+
+- type: loadout
+  id: LoadoutLegionPrimeHeavyArmor
+  category: Outer
+  cost: 14 # EVERY. SINGLE. POINT.
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionPrimeDecanus    
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionPrimeDecanus 
+      min: 72000 # unrobust primes should be filtered by the 20 hour mark
+  items:
+    - N14ClothingOuterPowerArmorLegion

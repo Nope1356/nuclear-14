@@ -26,10 +26,10 @@
   completetime: 10
   requiresBlueprint: true
   materials:
-    Steel: 400
+    Steel: 1500
     Cloth: 200
     Thread: 150
-    Plastic: 75
+    Plastic: 750
 
 - type: latheRecipe
   id: N14BPC27HelmetMediumGeneric
@@ -50,10 +50,10 @@
   completetime: 14
   requiresBlueprint: true
   materials:
-    Steel: 700
+    Steel: 22000
     Cloth: 250
     Thread: 175
-    Plastic: 125
+    Plastic: 1000
 
 - type: latheRecipe
   id: N14BPC27HelmetHeavyGeneric
@@ -80,10 +80,10 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 400
+    Steel: 1500
     Cloth: 200
     Thread: 150
-    Plastic: 75
+    Plastic: 750
 
 - type: latheRecipe
   id: N14BPC27HelmetMediumNCR
@@ -108,10 +108,10 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 700
+    Steel: 22000
     Cloth: 250
     Thread: 175
-    Plastic: 125
+    Plastic: 1000
 
 - type: latheRecipe
   id: N14BPC27HelmetHeavyNCR
@@ -140,10 +140,10 @@
   availableFaction:
   - BrotherhoodOfSteel
   materials:
-    Steel: 400
+    Steel: 1500
     Cloth: 200
     Thread: 150
-    Plastic: 75
+    Plastic: 750
 
 - type: latheRecipe
   id: N14BPC27HelmetMediumBoS
@@ -168,10 +168,10 @@
   availableFaction:
   - BrotherhoodOfSteel
   materials:
-    Steel: 700
+    Steel: 22000
     Cloth: 250
     Thread: 175
-    Plastic: 125
+    Plastic: 1000
 
 - type: latheRecipe
   id: N14BPC27HelmetHeavyBoS

@@ -78,6 +78,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: workbench
+  offset: 0.5, 0 #Misfits Add
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -96,6 +97,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: ammobench
+  offset: 0.5, 0 #Misfits Add: Copy the offset of the sprite
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -132,6 +134,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/forgeworkbench.rsi
     state: forgeicon
+  offset: 0.5, 0 #Misfits Add: Copy the offset of the sprite
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -150,6 +153,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: tinkerbench
+  offset: 0.5, 0 #Misfits Add: Copy the offset of the sprite
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -168,6 +172,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: armorbench
+  offset: 0.5, 0 #Misfits Add: Copy the offset of the sprite
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -186,6 +191,7 @@
   icon:
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: weaponbench
+  offset: 0.5, 0 #Misfits Add: Copy the offset of the sprite
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

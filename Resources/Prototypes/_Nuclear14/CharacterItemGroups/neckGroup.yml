@@ -41,3 +41,13 @@
       id: MisfitsLoadoutNeckCloakNCRWoods
     - type: loadout # #Misfits Add - Tribal cloak
       id: MisfitsLoadoutNeckCloakTribal
+    - type: loadout
+      id: ClothingNeckScarfStripedLightBlue
+    - type: loadout
+      id: ClothingNeckScarfStripedRed
+    - type: loadout
+      id: ClothingNeckScarfStripedGreen
+    - type: loadout
+      id: ClothingNeckScarfStripedBrown
+    - type: loadout
+      id: ClothingNeckScarfStripedBlue

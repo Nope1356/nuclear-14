@@ -1,60 +1,38 @@
 # Ug-Qualtoth mutation markings — applied progressively by UgQualtothSystem as worshippers transform.
-# Stage 1: right hand → claw
-# Stage 2: right hand marking removed; full right arm applied
-# Stage 3: chest + both legs (head left untouched)
-# Stage 4: full polymorph (no additional markings needed)
+# Each stage is a single full-body overlay that replaces the previous stage's sprite.
+# Stage 1: stage_one overlay
+# Stage 2: stage_two overlay  (stage_one removed)
+# Stage 3: stage_three overlay (stage_two removed)
+# Stage 4: full polymorph (stage_three removed, no marking needed)
 #
-# Art placeholder: solid-colour 128x32 PNGs (4 cardinal directions).
-# Replace with final artwork at: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-
-# ── Stage 1: right hand claw ───────────────────────────────────────────────
+# Art: _Misfits/Mobs/Customization/ug_qualtoth_mutations.rsi
 
 - type: marking
-  id: UgQualtothRHandClaw
-  bodyPart: RHand
-  markingCategory: RightHand
-  # No speciesRestrictions — tribals can be Human or Ghoul; the system only
-  # adds this on entities with UgQualtothWorshipperComponent anyway.
-  sprites:
-  - sprite: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-    state: r_hand_claw
-
-# ── Stage 2: full right arm ────────────────────────────────────────────────
-
-- type: marking
-  id: UgQualtothRArm
-  bodyPart: RArm
-  markingCategory: RightArm
-  sprites:
-  - sprite: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-    state: r_arm
-
-# ── Stage 3: chest / torso ─────────────────────────────────────────────────
-
-- type: marking
-  id: UgQualtothChest
+  id: UgQualtothStage1
   bodyPart: Chest
   markingCategory: Chest
+  hidden: true
+  renderOverClothing: true
   sprites:
-  - sprite: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-    state: chest
-
-# ── Stage 3: right leg ─────────────────────────────────────────────────────
+  - sprite: _Misfits/Mobs/Customization/ug_qualtoth_mutations.rsi
+    state: stage_one
 
 - type: marking
-  id: UgQualtothRLeg
-  bodyPart: RLeg
-  markingCategory: RightLeg
+  id: UgQualtothStage2
+  bodyPart: Chest
+  markingCategory: Chest
+  hidden: true
+  renderOverClothing: true
   sprites:
-  - sprite: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-    state: r_leg
-
-# ── Stage 3: left leg ──────────────────────────────────────────────────────
+  - sprite: _Misfits/Mobs/Customization/ug_qualtoth_mutations.rsi
+    state: stage_two
 
 - type: marking
-  id: UgQualtothLLeg
-  bodyPart: LLeg
-  markingCategory: LeftLeg
+  id: UgQualtothStage3
+  bodyPart: Chest
+  markingCategory: Chest
+  hidden: true
+  renderOverClothing: true
   sprites:
-  - sprite: _Nuclear14/Mobs/Customization/UgQualtoth/ug_qualtoth_mutations.rsi
-    state: l_leg
+  - sprite: _Misfits/Mobs/Customization/ug_qualtoth_mutations.rsi
+    state: stage_three

@@ -29,3 +29,5 @@
       id: ClothingMaskWhiteBalaclava
     - type: loadout
       id: ClothingMaskBreather
+    - type: loadout
+      id: ClothingMaskFox

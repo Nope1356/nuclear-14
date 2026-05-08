@@ -1,7 +1,7 @@
 <Document>
 # Weapons
 
-[textlink="View Full Wiki Page" link="https://ss14.misfitsystems.net/wiki/index.php/Weapons"/]
+[textlink="View Full Wiki Page" link="https://wiki.misfitsystems.net/index.php/Weapons"/]
 
 ## Weapons & Ammo
 
@@ -12,13 +12,13 @@
 <Table Columns="2">
   <Box>[bold]Category[/bold]</Box>
   <Box>[bold]Description[/bold]</Box>
-  <Box>[textlink="[bold]Ranged Weapons[/bold]" link="https://ss14.misfitsystems.net/wiki/index.php/Ranged_Weapons"/]</Box>
+  <Box>[textlink="[bold]Ranged Weapons[/bold]" link="https://wiki.misfitsystems.net/index.php/Ranged_Weapons"/]</Box>
   <Box>Firearms, energy guns, and heavy weapons.</Box>
-  <Box>[textlink="[bold]Melee Weapons[/bold]" link="https://ss14.misfitsystems.net/wiki/index.php/Melee_Weapons"/]</Box>
+  <Box>[textlink="[bold]Melee Weapons[/bold]" link="https://wiki.misfitsystems.net/index.php/Melee_Weapons"/]</Box>
   <Box>Knives, clubs, spears, and other close-combat gear.</Box>
-  <Box>[textlink="[bold]Explosives[/bold]" link="https://ss14.misfitsystems.net/wiki/index.php/Explosives"/]</Box>
+  <Box>[textlink="[bold]Explosives[/bold]" link="https://wiki.misfitsystems.net/index.php/Explosives"/]</Box>
   <Box>Grenades, launchers, mines, and demolition tools.</Box>
-  <Box>[textlink="[bold]Other Weapons[/bold]" link="https://ss14.misfitsystems.net/wiki/index.php/Other_Weapons"/]</Box>
+  <Box>[textlink="[bold]Other Weapons[/bold]" link="https://wiki.misfitsystems.net/index.php/Other_Weapons"/]</Box>
   <Box>Miscellaneous and specialty weapons.</Box>
 </Table>
 

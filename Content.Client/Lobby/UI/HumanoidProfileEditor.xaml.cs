@@ -768,7 +768,6 @@ namespace Content.Client.Lobby.UI
             _species.AddRange(_prototypeManager.EnumeratePrototypes<SpeciesPrototype>()
                 .Where(o => o.RoundStart)
                 .Where(o => !o.WhitelistRequired // #Misfits Change
-                    || _requirements.IsWhitelisted()
                     || (o.JobWhitelistUnlock != null && _requirements.IsJobWhitelisted(o.JobWhitelistUnlock.Value.Id))) // #Misfits Change
                 .OrderBy(o => o.Order)); // #Misfits Change: sort by Order field
             var speciesIds = _species.Select(o => o.ID).ToList();
@@ -3023,9 +3022,10 @@ namespace Content.Client.Lobby.UI
                 selector.PreferenceChanged += preference =>
                 {
                     // Make sure they have enough loadout points
-                    var selected = preference.Selected
-                        ? CheckPoints(-selector.Loadout.Cost, preference.Selected)
-                        : CheckPoints(selector.Loadout.Cost, preference.Selected);
+                    var wasSelected = Profile?.LoadoutPreferences
+                        .FirstOrDefault(it => it.LoadoutName == selector.Loadout.ID)
+                        ?.Selected ?? false;
+                    var selected = preference.Selected && (wasSelected || CheckPoints(-selector.Loadout.Cost, true));
 
                     // Update Preferences
                     Profile = Profile?.WithLoadoutPreference(
@@ -3044,7 +3044,7 @@ namespace Content.Client.Lobby.UI
             bool CheckPoints(int points, bool preference)
             {
                 var temp = LoadoutPointsBar.Value + points;
-                return preference ? !(temp < 0) : temp < 0;
+                return preference ? temp >= 0 : temp < 0;
             }
         }
 

@@ -1,7 +1,7 @@
 <Document>
 # Survival Basics
 
-[textlink="View Full Wiki Page" link="https://ss14.misfitsystems.net/wiki/index.php/Survival%20Basics"/]
+[textlink="View Full Wiki Page" link="https://wiki.misfitsystems.net/index.php/Survival%20Basics"/]
 
 ## Survival Basics
 
@@ -23,7 +23,7 @@
   <Box>Radiation exposure. Avoid unless treated.</Box>
 </Table>
 
-<p>Purify water with filters, chemistry, or boiling whenever you can. See [textlink="Materials" link="https://ss14.misfitsystems.net/wiki/index.php/Materials"/] for water purification recipes.</p>
+<p>Purify water with filters, chemistry, or boiling whenever you can. See [textlink="Materials" link="https://wiki.misfitsystems.net/index.php/Materials"/] for water purification recipes.</p>
 
 <h3 Text="Food"/>
 
@@ -31,7 +31,7 @@
 <ul>
 <li>Cook raw meat before eating it - raw meat carries illness risk.</li>
 <li>Do not assume every plant or scavenged meal is safe.</li>
-<li>See [textlink="Cooking" link="https://ss14.misfitsystems.net/wiki/index.php/Cooking"/] for meal recipes and [textlink="Botany" link="https://ss14.misfitsystems.net/wiki/index.php/Botany"/] for growing your own food supply.</li>
+<li>See [textlink="Cooking" link="https://wiki.misfitsystems.net/index.php/Cooking"/] for meal recipes and [textlink="Botany" link="https://wiki.misfitsystems.net/index.php/Botany"/] for growing your own food supply.</li>
 </ul>
 <p>[bold]Quick food options:[/bold]</p>
 <ul>
@@ -50,7 +50,7 @@
   <Box>[bold]Geiger Counter[/bold]</Box>
   <Box>Measures current radiation level in your environment.</Box>
   <Box>[bold]RadAway Inhaler[/bold]</Box>
-  <Box>Flushes accumulated radiation from your body. See [textlink="Medicine Crafting" link="https://ss14.misfitsystems.net/wiki/index.php/Medicine_Crafting"/] to craft your own.</Box>
+  <Box>Flushes accumulated radiation from your body. See [textlink="Medicine Crafting" link="https://wiki.misfitsystems.net/index.php/Medicine_Crafting"/] to craft your own.</Box>
   <Box>[bold]Rad-X[/bold]</Box>
   <Box>Reduces radiation absorption rate while active. Found in medical caches or purchased from doctors.</Box>
 </Table>

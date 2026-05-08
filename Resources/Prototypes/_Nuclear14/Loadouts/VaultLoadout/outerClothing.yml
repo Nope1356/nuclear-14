@@ -31,7 +31,7 @@
     - N14ClothingOuterJacketBomber
 
 - type: loadout 
-  id: ClothingOuterCoatDetectiveVault
+  id: ClothingOuterCoatInspector
   category: Outer
   cost: 2
   requirements:
@@ -44,7 +44,7 @@
        jobs:
        - VaultSecurity
   items:
-    - ClothingOuterCoatDetective
+    - ClothingOuterCoatInspector
 
 - type: loadout 
   id: ClothingOuterCoatGentleVault
@@ -77,3 +77,68 @@
        - VaultDweller
   items:
    - ClothingOuterDenimJacket
+
+- type: loadout 
+  id: ClothingOuterCoatTrenchVault
+  category: Outer
+  cost: 2
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Vault
+      min: 900 # 15 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultDweller
+       - Overseer
+  items:
+   - ClothingOuterCoatTrench
+
+- type: loadout 
+  id: ClothingOuterCoatJensenVault
+  category: Outer
+  cost: 2
+  requirements:
+    - !type:CharacterPlaytimeRequirement
+      tracker: VaultDweller
+      min: 1200 # 20 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultDweller
+  items:
+   - ClothingOuterCoatJensen
+  
+- type: loadout 
+  id: N14ClothingOuterBosScribeVault
+  category: Outer
+  cost: 2
+  requirements:
+    - !type:CharacterPlaytimeRequirement
+      tracker: VaultEngineer
+      min: 900 # 15 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultEngineer
+  items:
+   - N14ClothingOuterBosScribe
+
+- type: loadout 
+  id: N14ClothingOuterPoliceVestVault
+  category: Outer
+  cost: 2
+  requirements:
+    - !type:CharacterPlaytimeRequirement
+      tracker: VaultSecurity
+      min: 1200 # 20 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultSecurity
+  items:
+   - N14ClothingOuterPoliceVest

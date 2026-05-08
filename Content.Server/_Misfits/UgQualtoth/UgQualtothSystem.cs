@@ -8,9 +8,9 @@
 //     ~5 s / ~10 s / ~15 s so only the praying player sees the idol's "voice".
 //   • Moving or taking damage cancels the ritual.
 //   • Each completed prayer + kills near the idol build devotion, advancing stages 0→4:
-//       Stage 1 — right hand claw marking; +10% speed, +5 slash
-//       Stage 2 — full right arm marking; +20% speed, more damage, minor resistance
-//       Stage 3 — chest + leg markings (head untouched); +30% speed, heavy resistance
+//       Stage 1 — left arm transformed; +10% speed, +5 slash
+//       Stage 2 — arm + both legs; +20% speed, more damage, minor resistance
+//       Stage 3 — both arms + legs + chest (full body); +30% speed, heavy resistance
 //       Stage 4 — full body polymorph into UgQualtothAbomination
 
 using Content.Server.Chat.Systems;
@@ -28,6 +28,8 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.NPC.Components;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Inventory;
+using Content.Shared.Inventory.Events;
 using Content.Shared.Verbs;
 using Content.Shared.Weapons.Melee;
 using Robust.Server.Audio;
@@ -51,16 +53,15 @@ public sealed class UgQualtothSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _speedMod = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly NpcFactionSystem _faction = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
-    // Marking prototype IDs.
-    private const string MarkingRHandClaw = "UgQualtothRHandClaw";
-    private const string MarkingRArm      = "UgQualtothRArm";
-    private const string MarkingChest     = "UgQualtothChest";
-    private const string MarkingRLeg      = "UgQualtothRLeg";
-    private const string MarkingLLeg      = "UgQualtothLLeg";
+    // Marking prototype IDs — one overlay per stage, each replaces the previous.
+    private const string MarkingStage1 = "UgQualtothStage1";
+    private const string MarkingStage2 = "UgQualtothStage2";
+    private const string MarkingStage3 = "UgQualtothStage3";
 
     // Damage modifier set IDs.
     private const string Stage2DamageModifier      = "UgQualtothStage2";
@@ -93,6 +94,7 @@ public sealed class UgQualtothSystem : EntitySystem
         SubscribeLocalEvent<UgQualtothArtifactComponent, UgQualtothPrayDoAfterEvent>(OnPrayDoAfter);
 
         SubscribeLocalEvent<UgQualtothWorshipperComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshSpeed);
+        SubscribeLocalEvent<UgQualtothWorshipperComponent, IsEquippingAttemptEvent>(OnEquipAttempt);
 
         SubscribeLocalEvent<MobStateChangedEvent>(OnMobStateDeath);
     }
@@ -321,24 +323,39 @@ public sealed class UgQualtothSystem : EntitySystem
             return;
 
         var victim = args.Target;
+
+        // Ignore entities that are already mid-deletion — their transform is unreliable.
+        if (TerminatingOrDeleted(victim))
+            return;
+
         var victimPos = _transform.GetWorldPosition(victim);
 
         var idolQuery = EntityQueryEnumerator<UgQualtothArtifactComponent, TransformComponent>();
         while (idolQuery.MoveNext(out var idolUid, out var idolComp, out var idolXform))
         {
+            if (TerminatingOrDeleted(idolUid))
+                continue;
+
             var idolPos = _transform.GetWorldPosition(idolXform);
             if ((victimPos - idolPos).Length() > idolComp.SacrificeRange)
                 continue;
 
+            var devotionGain = HasComp<HumanoidAppearanceComponent>(victim)
+                ? idolComp.HumanoidSacrificeDevotionGain
+                : idolComp.AnimalSacrificeDevotionGain;
+
             var worshipperQuery = EntityQueryEnumerator<UgQualtothWorshipperComponent, TransformComponent>();
             while (worshipperQuery.MoveNext(out var worshipperUid, out var worshipperComp, out var worshipperXform))
             {
+                if (TerminatingOrDeleted(worshipperUid))
+                    continue;
+
                 if (worshipperXform.MapID != idolXform.MapID)
                     continue;
 
-                var devotionGain = HasComp<HumanoidAppearanceComponent>(victim)
-                    ? idolComp.HumanoidSacrificeDevotionGain
-                    : idolComp.AnimalSacrificeDevotionGain;
+                // Don't award devotion for the worshipper's own death.
+                if (worshipperUid == victim)
+                    continue;
 
                 AddDevotion(worshipperUid, worshipperComp, devotionGain,
                     new Entity<UgQualtothArtifactComponent>(idolUid, idolComp));
@@ -409,11 +426,11 @@ public sealed class UgQualtothSystem : EntitySystem
             _audio.PlayPvs(idol.Comp.TransformSound, idol);
     }
 
-    // ── Stage 1 ──────────────────────────────────────────────────────────────
+    // ── Stage 1 ───────────────────────────────────────────────────────────────
 
     private void ApplyStage1(EntityUid uid)
     {
-        ApplyMarking(uid, MarkingRHandClaw);
+        ApplyMarking(uid, MarkingStage1);
 
         if (TryComp<MeleeWeaponComponent>(uid, out var melee))
         {
@@ -423,12 +440,23 @@ public sealed class UgQualtothSystem : EntitySystem
         }
     }
 
-    // ── Stage 2 ──────────────────────────────────────────────────────────────
+    private static readonly HumanoidVisualLayers[] Stage2HiddenLayers =
+    {
+        HumanoidVisualLayers.RLeg,
+        HumanoidVisualLayers.LLeg,
+        HumanoidVisualLayers.RFoot,
+        HumanoidVisualLayers.LFoot,
+    };
+
+    // ── Stage 2 ───────────────────────────────────────────────────────────────
 
     private void ApplyStage2(EntityUid uid)
     {
-        _humanoid.RemoveMarking(uid, MarkingRHandClaw);
-        ApplyMarking(uid, MarkingRArm);
+        _humanoid.RemoveMarking(uid, MarkingStage1);
+        ApplyMarking(uid, MarkingStage2);
+        _humanoid.SetLayersVisibility(uid, Stage2HiddenLayers, visible: false, permanent: true);
+        _inventory.TryUnequip(uid, uid, "gloves", out _, silent: false, force: true);
+        _inventory.TryUnequip(uid, uid, "shoes", out _, silent: false, force: true);
 
         if (TryComp<MeleeWeaponComponent>(uid, out var melee))
         {
@@ -443,13 +471,25 @@ public sealed class UgQualtothSystem : EntitySystem
             _damageable.SetDamageModifierSetId(uid, Stage2DamageModifier);
     }
 
-    // ── Stage 3 ──────────────────────────────────────────────────────────────
+    // ── Stage 3 ───────────────────────────────────────────────────────────────
+
+    private static readonly HumanoidVisualLayers[] Stage3HiddenLayers =
+    {
+        HumanoidVisualLayers.RArm,
+        HumanoidVisualLayers.LArm,
+        HumanoidVisualLayers.RHand,
+        HumanoidVisualLayers.LHand,
+        HumanoidVisualLayers.RLeg,
+        HumanoidVisualLayers.LLeg,
+        HumanoidVisualLayers.RFoot,
+        HumanoidVisualLayers.LFoot,
+    };
 
     private void ApplyStage3(EntityUid uid)
     {
-        ApplyMarking(uid, MarkingChest);
-        ApplyMarking(uid, MarkingRLeg);
-        ApplyMarking(uid, MarkingLLeg);
+        _humanoid.RemoveMarking(uid, MarkingStage2);
+        ApplyMarking(uid, MarkingStage3);
+        _humanoid.SetLayersVisibility(uid, Stage3HiddenLayers, visible: false, permanent: true);
 
         if (TryComp<MeleeWeaponComponent>(uid, out var melee))
         {
@@ -468,8 +508,10 @@ public sealed class UgQualtothSystem : EntitySystem
 
     private void ApplyStage4(EntityUid uid, UgQualtothWorshipperComponent comp)
     {
+        _humanoid.RemoveMarking(uid, MarkingStage3);
+        _humanoid.SetLayersVisibility(uid, Stage3HiddenLayers, visible: true, permanent: true);
+
         // Change the character's species entirely — base body sprites swap to the full-abomination look.
-        // All prior-stage markings are preserved on top of the new body sprites.
         _humanoid.SetSpecies(uid, comp.AbominationSpecies);
 
         // Deep crimson skin to complete the transformation.
@@ -502,6 +544,16 @@ public sealed class UgQualtothSystem : EntitySystem
     // ──────────────────────────────────────────────────────────────────────────
     //  Speed modifier
     // ──────────────────────────────────────────────────────────────────────────
+
+    private void OnEquipAttempt(Entity<UgQualtothWorshipperComponent> ent,
+        ref IsEquippingAttemptEvent args)
+    {
+        if (ent.Comp.Stage < 2)
+            return;
+
+        if (args.Slot == "gloves" || args.Slot == "shoes")
+            args.Cancel();
+    }
 
     private void OnRefreshSpeed(Entity<UgQualtothWorshipperComponent> ent,
         ref RefreshMovementSpeedModifiersEvent args)

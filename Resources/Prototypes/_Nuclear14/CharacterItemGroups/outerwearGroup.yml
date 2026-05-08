@@ -70,7 +70,7 @@
     - type: loadout
       id: N14LoadoutOuterCoatLeatherJacketVault
     - type: loadout
-      id: ClothingOuterCoatDetectiveVault
+      id: ClothingOuterCoatInspector
     - type: loadout
       id: ClothingOuterCoatGentleVault
     - type: loadout
@@ -79,4 +79,11 @@
       id: N14LoadoutOuterCoatLeatherJacket
     - type: loadout
       id: ClothingOuterDenimJacketVault
-      
+    - type: loadout
+      id: ClothingOuterCoatTrenchVault
+    - type: loadout
+      id: ClothingOuterCoatJensenVault
+    - type: loadout
+      id: N14ClothingOuterBosScribeVault
+    - type: loadout
+      id: N14ClothingOuterPoliceVestVault

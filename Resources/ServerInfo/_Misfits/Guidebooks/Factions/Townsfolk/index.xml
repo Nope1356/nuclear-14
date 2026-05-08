@@ -1,7 +1,7 @@
 <Document>
 # Townsfolk
 
-[textlink="View Full Wiki Page" link="https://ss14.misfitsystems.net/wiki/index.php/Townsfolk"/]
+[textlink="View Full Wiki Page" link="https://wiki.misfitsystems.net/index.php/Townsfolk"/]
 
 <p>◈ Townsfolk ◈ Faction Dossier ◈ Civilian ◈</p>
 
@@ -74,29 +74,29 @@ Neutral Commerce</Box>
   <Box>[bold]Faction[/bold]</Box>
   <Box>[bold]Standing[/bold]</Box>
   <Box>[bold]Notes[/bold]</Box>
-  <Box>[textlink="NCR" link="https://ss14.misfitsystems.net/wiki/index.php/New_California_Republic"/]</Box>
+  <Box>[textlink="NCR" link="https://wiki.misfitsystems.net/index.php/New_California_Republic"/]</Box>
   <Box>Cooperative</Box>
   <Box>The NCR provides security presence. The town provides a trading post and staging area.</Box>
-  <Box>[textlink="Brotherhood of Steel" link="https://ss14.misfitsystems.net/wiki/index.php/Brotherhood_of_Steel"/]</Box>
+  <Box>[textlink="Brotherhood of Steel" link="https://wiki.misfitsystems.net/index.php/Brotherhood_of_Steel"/]</Box>
   <Box>Cautious</Box>
   <Box>The Brotherhood is tolerated as long as they respect town neutrality. Their technology sweeps are disruptive.</Box>
-  <Box>[textlink="Caesar's Legion" link="https://ss14.misfitsystems.net/wiki/index.php/Caesar%27s_Legion"/]</Box>
+  <Box>[textlink="Caesar's Legion" link="https://wiki.misfitsystems.net/index.php/Caesar%27s_Legion"/]</Box>
   <Box>Hostile</Box>
   <Box>The Legion views settled civilians as resources to be consumed. Towns are targets.</Box>
-  <Box>[textlink="Followers of the Apocalypse" link="https://ss14.misfitsystems.net/wiki/index.php/Followers_of_the_Apocalypse"/]</Box>
+  <Box>[textlink="Followers of the Apocalypse" link="https://wiki.misfitsystems.net/index.php/Followers_of_the_Apocalypse"/]</Box>
   <Box>Friendly</Box>
   <Box>Followers clinics are welcomed. Free medical care benefits the entire community.</Box>
-  <Box>[textlink="Wastelanders" link="https://ss14.misfitsystems.net/wiki/index.php/Wastelanders"/]</Box>
+  <Box>[textlink="Wastelanders" link="https://wiki.misfitsystems.net/index.php/Wastelanders"/]</Box>
   <Box>Open</Box>
   <Box>Drifters and scavengers are welcome in town as long as they keep the peace.</Box>
-  <Box>[textlink="Outlaws" link="https://ss14.misfitsystems.net/wiki/index.php/Outlaws"/]</Box>
+  <Box>[textlink="Outlaws" link="https://wiki.misfitsystems.net/index.php/Outlaws"/]</Box>
   <Box>Hostile</Box>
   <Box>Raiders threaten the town's supplies, people, and peace.</Box>
-  <Box>[textlink="Wasteland Tribes" link="https://ss14.misfitsystems.net/wiki/index.php/Wasteland_Tribes"/]</Box>
+  <Box>[textlink="Wasteland Tribes" link="https://wiki.misfitsystems.net/index.php/Wasteland_Tribes"/]</Box>
   <Box>Variable</Box>
   <Box>Relations depend on the tribe's leadership and the Mayor's diplomacy.</Box>
 </Table>
 
-<p>Townsfolk are one of the [bold]war-capable factions[/bold] and may declare or receive [textlink="faction war declarations" link="https://ss14.misfitsystems.net/wiki/index.php/Faction_War"/] during a round.</p>
+<p>Townsfolk are one of the [bold]war-capable factions[/bold] and may declare or receive [textlink="faction war declarations" link="https://wiki.misfitsystems.net/index.php/Faction_War"/] during a round.</p>
 
 </Document>

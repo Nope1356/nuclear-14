@@ -339,3 +339,46 @@
   - type: Tag
     tags:
     - SuperMutantWearable
+
+    # Misfits Add - Follower Supermutant sprites.
+- type: entity
+  parent: ClothingHandsBase
+  id: SupermutantFollowerGloves
+  name: Supermutant Sterile Gloves
+  description: Gigantic gloves intended for supermutants to use in the medical field.
+  components:
+  - type: Sprite
+    sprite: _Misfits/Clothing/SuperMutant/follower_gloves.rsi
+  - type: Clothing
+    sprite: _Misfits/Clothing/SuperMutant/follower_gloves.rsi
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+
+- type: entity
+  parent: [UnsensoredClothingUniformBase, AllowSuitStorageClothing]
+  id: ClothingSuperMutantLabcoat
+  name: supermutant lab coat
+  description: A large lab coat designed for supermutants to wear in a medical setting.
+  components:
+  - type: Sprite
+    sprite: _Misfits/Clothing/SuperMutant/follower_labcoat.rsi
+  - type: Clothing
+    sprite: _Misfits/Clothing/SuperMutant/follower_labcoat.rsi
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingSuperMutantSterileMask
+  name: Large Sterile Mask
+  description: A gigantic sterile mask designed for supermutants to wear in a medical setting.
+  components:
+  - type: Sprite
+    sprite: _Misfits/Clothing/SuperMutant/follower_mask.rsi
+  - type: Clothing
+    sprite: _Misfits/Clothing/SuperMutant/follower_mask.rsi
+  - type: Tag
+    tags:
+    - SuperMutantWearable

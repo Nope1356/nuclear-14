@@ -53,8 +53,8 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 5000
-    Plastic: 750
+    Steel: 1500
+    Plastic: 100
     N14Iron: 500
 
 # Recharger variants are intentionally excluded from blueprint crafting.
@@ -125,10 +125,11 @@
   - Vault
   materials:
     Steel: 4000
-    Glass: 700
-    Circuitry: 1000
+    Glass: 1500
+    Circuitry: 500
     ScrapElectronic: 150
     Plastic: 500
+    N14Gold: 200
 
 - type: latheRecipe
   id: N14BPVaultWeaponLaserRifleWattz2000
@@ -139,10 +140,12 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 10000
+    Steel: 4000
     Glass: 3500
-    Circuitry: 1000
-    ScrapElectronic: 550
+    Circuitry: 200
+    ScrapElectronic: 500
+    N14Gold: 1000
+    N14Copper: 500
 
 - type: latheRecipe
   id: N14BPVaultWeaponLaserRifleAuto
@@ -155,9 +158,11 @@
   materials:
     Steel: 8000
     Glass: 1500
-    Circuitry: 950
-    ScrapElectronic: 675
+    Circuitry: 675
+    ScrapElectronic: 500
     Plastic: 750
+    N14Gold: 500
+    N14Silver: 500
 
 - type: latheRecipe
   id: N14BPVaultWeaponLaserRCW
@@ -168,11 +173,12 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 70000
-    Glass: 3500
+    Steel: 20000
+    Glass: 5000
     Circuitry: 1200
     ScrapElectronic: 975
     Plastic: 750
+    N14Gold: 1500
 
 # =====================================================================
 # VAULT ARMOR RECIPES
@@ -344,7 +350,7 @@
     Glass: 100
     Circuitry: 100
     ScrapElectronic: 100
-    Lead: 100
+    N14Gold: 100
 
 - type: latheRecipe
   id: N14BPVaultAmmoMag10mmSMG
@@ -355,7 +361,7 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 1250
+    Steel: 500
     Lead: 200
     N14Gunpowder: 300
 
@@ -704,6 +710,18 @@
 
 # --- Tribe Tier 1 Armor ---
 - type: latheRecipe
+  id: TribalMaskofGreed
+  result: TribalMaskofGreed
+  category: N14BlueprintTribeArmorT1
+  completetime: 6
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    N14Gold: 200
+    Cloth: 750
+
+- type: latheRecipe
   id: N14BPTribeArmorTribalArmor
   result: N14ClothingOuterTribalArmor
   category: N14BlueprintTribeArmorT1
@@ -730,6 +748,18 @@
     Leather: 50
 
 # --- Tribe Tier 2 Armor ---
+- type: latheRecipe
+  id: TribalHelmetofPeace
+  result: TribalHelmetofPeace
+  category: N14BlueprintTribeArmorT2
+  completetime: 20
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    Leather: 1000
+    Cloth: 500
+
 - type: latheRecipe
   id: N14BPTribeArmorBandito
   result: N14ClothingOuterBandito

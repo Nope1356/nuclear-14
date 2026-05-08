@@ -48,6 +48,6 @@
     back:
     - N14Bandage
     - N14CurrencyPrewarMoney100
-
+    - VaultGuidePaper
 - type: playTimeTracker
   id: VaultEngineer

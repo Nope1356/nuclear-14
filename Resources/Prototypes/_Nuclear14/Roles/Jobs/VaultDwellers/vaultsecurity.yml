@@ -25,6 +25,8 @@
   access:
   - VaultDweller
   - VaultSecurity
+  - VaultEngineer
+  - VaultMedical
   special:
   - !type:AddComponentSpecial
     components:
@@ -55,6 +57,6 @@
     - N14CurrencyPrewarMoney100
     - N14MagazinePistol10mm
     - N14MagazinePistol10mm
-
+    - VaultGuidePaper
 - type: playTimeTracker
   id: VaultSecurity

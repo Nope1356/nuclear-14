@@ -105,7 +105,7 @@
     sprite: Clothing/OuterClothing/Coats/insp_coat.rsi
 
 - type: entity
-  parent: ClothingOuterStorageToggleableBase
+  parent: N14ClothingOuterBase
   id: ClothingOuterCoatJensen
   name: jensen coat
   description: A jensen coat.
@@ -114,11 +114,9 @@
     sprite: Clothing/OuterClothing/Coats/jensencoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/jensencoat.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodChaplainHood
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: N14ClothingOuterBase
   id: ClothingOuterCoatTrench
   name: trench coat
   description: A comfy trench coat.
@@ -127,21 +125,6 @@
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/trenchcoat.rsi
-  - type: TemperatureProtection
-    coefficient: 0.1
-  - type: Armor
-    modifiers:
-      coefficients:
-        Slash: 0.95
-  - type: Food
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 20
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase

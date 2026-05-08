@@ -23,6 +23,7 @@
   roles:
   - SuperMutant
   - Nightkin            # #Misfits Add - separate Nightkin whitelist under FEV Mutants
+  - SuperMutantFollowerDoctor # #Misfits Add - FOTA-aligned supermutant Doctor
   - SuperMutantGladiator    # #Misfits Add - Supermutant Legion Gladiator (Legion-aligned)
   - SuperMutantNCRRanger   # #Misfits Add - NCR-aligned supermutant ranger
   - SuperMutantNCRTrooper  # #Misfits Add - NCR-aligned supermutant trooper

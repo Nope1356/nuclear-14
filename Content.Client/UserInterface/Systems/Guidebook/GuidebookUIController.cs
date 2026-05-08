@@ -26,7 +26,7 @@ public sealed class GuidebookUIController : UIController, IOnStateEntered<LobbyS
     // #Misfits Add - Open wiki in system browser instead of in-game guidebook window
     [Dependency] private readonly IUriOpener _uriOpener = default!;
 
-    private const string WikiUrl = "https://ss14.misfitsystems.net/wiki/index.php/Main_Page";
+    private const string WikiUrl = "https://wiki.misfitsystems.net/index.php/Main_Page";
 
     // #Misfits Change - Reverted to standard GuidebookWindow (WebView module deprecated upstream)
     private GuidebookWindow? _guideWindow;

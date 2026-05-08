@@ -219,6 +219,8 @@ namespace Content.Client.Construction
                 sprite.LayerSetVisible(i, true);
             }
 
+            sprite.Offset = prototype.Offset; // Misfits Add: Basically makes it so you can offset the sprite of the construction ghost
+
             if (prototype.CanBuildInImpassable)
                 EnsureComp<WallMountComponent>(ghost.Value).Arc = new(Math.Tau);
 

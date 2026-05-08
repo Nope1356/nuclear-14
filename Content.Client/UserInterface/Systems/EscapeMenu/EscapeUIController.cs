@@ -98,7 +98,7 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         // #Misfits Change - WikiButton opens the Misfits wiki in browser
         _escapeWindow.WikiButton.OnPressed += _ =>
         {
-            _uri.OpenUri("https://ss14.misfitsystems.net/wiki/index.php/Main_Page");
+            _uri.OpenUri("https://wiki.misfitsystems.net/index.php/Main_Page");
         };
 
 // discord-button start
@@ -173,7 +173,7 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         // #Misfits Change - WikiButton opens the Misfits wiki in browser
         _escapeWindow.WikiButton.OnPressed += _ =>
         {
-            _uri.OpenUri("https://ss14.misfitsystems.net/wiki/index.php/Main_Page");
+            _uri.OpenUri("https://wiki.misfitsystems.net/index.php/Main_Page");
         };
 
         // #Misfits Change - GuidebookButton hidden; WikiButton now serves as the wiki link

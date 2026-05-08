@@ -12,7 +12,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.75,-0.3,0.75,0.3"
+          bounds: "-0.25,0,1.25,0.3"
         density: 3000
         mask:
         - MachineMask
@@ -22,7 +22,7 @@
     sprite: _Nuclear14/Structures/Misc/workbenches.rsi
     state: workbench
     # Misfit Remove: Fix the offset issue with construction benches
-    #offset: 0.5, 0
+    offset: 0.5, 0
   - type: Lathe
   - type: MaterialStorage
   - type: ActivatableUI
@@ -197,13 +197,9 @@
     - N14ShellShotgun12
     - N14MagazineShotgun12
     - MagazineBox12gauge
-    - MisfitsShellShotgun12Beanbag
-    - MisfitsMagazineBox12GaugeBeanbag
     - N14ShellShotgun20
     - N14MagazineShotgun20
     - MagazineBox20gauge
-    - MisfitsMagazineBox20GaugeBeanbag
-    - MisfitsShellShotgun20Beanbag
     - N14MagazinePistol22lr
     - MagazineBox22
     - SpeedLoader44
@@ -432,6 +428,9 @@
     - MicroManipulatorStockPart
     - MatterBinStockPart
     - N14JunkComponentSensorModule #Misfits Add: For Modular Mines
+    - N14JunkComponentCapacitor1
+    - N14JunkComponentDiode1
+    - N14JunkComponentFuse1
     # Explosives - Misfits Add
     - N14LandMine        # Anti-Personnel Mine
     - LandMineKick       # Concussion Mine (non-lethal)
@@ -442,8 +441,14 @@
     - N14FlashPayload
     # #Misfits Add: Expose vanilla centrifuge machine board so players can rebuild MachineCentrifuge via machine frame.
     - CentrifugeMachineCircuitboard
+    - N14VinylPlayerCircuitboard
+    - N14TapeDeckCircuitboard
+    - N14StationRadioServerCircuitboard
+    - N14StationRadioRigCircuitboard
+    - N14StationRadioCircuitboard
     # #Misfits Add: Electrolyzer machine board so players can make electrolyzers via machine frame.
     - ElectrolysisUnitMachineCircuitboard
+    - CassetteTape
   - type: ActivatableUIRequiresPower
 
 - type: entity
@@ -528,13 +533,17 @@
     solutions:
       buffer:
         maxVol: 1000 # #Misfits Tweak - cap buffer at 150u to prevent super-chem stacking
-      pillBuffer: { }
+      pillBuffer:
+        maxVol: 1000
   - type: DumpableSolution
     solution: buffer
+  - type: Anchorable
+  - type: Rotatable
 
 - type: entity
   parent: BaseStructure
   id: N14WorkbenchChemistrysetFrame
+  categories: [ HideSpawnMenu ]
   description: A chemistry set for crafting drugs and compounds. This one is still being built!
   name: chemical set frame
   components:

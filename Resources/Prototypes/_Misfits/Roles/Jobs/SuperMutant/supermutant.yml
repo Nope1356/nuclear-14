@@ -28,6 +28,8 @@
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant
+          - Wastelander
+      
 
 - type: playTimeTracker
   id: SuperMutant
@@ -65,6 +67,7 @@
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant
+          - Wastelander
 
 - type: playTimeTracker
   id: Nightkin
@@ -97,6 +100,7 @@
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant
+          - CaesarLegion
   - !type:AddTraitSpecial
     traits: [ LanguageLatin ]
 - type: startingGear
@@ -254,6 +258,8 @@
   playTimeTracker: SuperMutantNCRTrooper
   icon: JobIconBorg
   supervisors: job-supervisors-ncr
+  access:
+    - NCR
   canBeAntag: false
   setPreference: true
   overrideConsoleVisibility: true
@@ -358,3 +364,51 @@
 
 - type: playTimeTracker
   id: SuperMutantTribal
+
+# Misfits add: FOTA supermutant.
+
+- type: job
+  id: SuperMutantFollowerDoctor
+  jobWhitelistBypassesRoleTimers: true
+  name: Supermutant Follower Doctor
+  description: A SuperMutant trained in the ways of medicine.
+  playTimeTracker: SuperMutantFollowerDoctor
+  icon: JobIconBorg
+  supervisors: job-supervisors-follower-head
+  canBeAntag: false
+  setPreference: true
+  overrideConsoleVisibility: true
+  whitelisted: true
+  hideWithoutWhitelist: true
+  spawnLoadout: true
+  applyTraits: true
+  startingGear: SuperMutantFollowerDoctorGear
+  requirements:
+    - !type:CharacterSpeciesRequirement
+      species:
+        - SuperMutant
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: NpcFactionMember
+          factions:
+            - PlayerSuperMutant
+            - Followers
+        - type: CPRTraining
+        - type: Sanitized
+- type: startingGear
+  id: SuperMutantFollowerDoctorGear
+  equipment:
+    jumpsuit: ClothingSuperMutantLabcoat
+    mask: ClothingSuperMutantSterileMask
+    back: ClothingBackpackDuffelSurgeryFilled
+    belt: N14ClothingBeltMedicalFilled
+    shoes: ClothingSuperMutantGladiatorBoots
+    gloves: SupermutantFollowerGloves
+    neck: ClothingNeckStethoscope
+    id: N14IDFollowerDoctor
+    ears: N14ClothingHeadsetFollowers
+    pocket1: N14HandheldHealthAnalyzer
+    pocket2: SurgicalSterilanSpray
+- type: playTimeTracker
+  id: SuperMutantFollowerDoctor

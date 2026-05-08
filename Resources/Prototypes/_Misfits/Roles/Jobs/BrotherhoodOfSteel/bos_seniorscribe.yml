@@ -39,10 +39,6 @@
         understands:
           - English
           - N14BrotherBeep
-      - type: RobotWeaponPickupBlacklist # #Misfits Add: Scribes use robot's no weapon pickup component as an alternative to pacifism.
-        blacklist:
-          components:
-          - Gun
 
 - type: startingGear
   id: BoSMidScribeGear

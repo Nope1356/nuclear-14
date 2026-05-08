@@ -84,8 +84,8 @@
   parent: N14IDNCRDogtagNCO
   id: N14IDNCRDogtagMPRecruit
   name: military police recruit's dogtags
-  description: An ID dogtag worn by NCR military police recruits.
-  suffix: Military Police Recruit
+  description: An ID dogtag worn by NCR military police specialists.
+  suffix: Military Police Specialist
   components:
   - type: PresetIdCard
     job: NCRMilitaryPoliceRecruit
@@ -93,9 +93,9 @@
 - type: entity
   parent: N14IDNCRDogtagNCO
   id: N14IDNCRDogtagMPSergeant
-  name: military police sergeant's dogtags
-  description: An ID dogtag worn by NCR military police sergeants.
-  suffix: Military Police Sergeant
+  name: military police staff sergeant's dogtags
+  description: An ID dogtag worn by NCR military police staff sergeants.
+  suffix: Military Police Staff Sergeant
   components:
   - type: PresetIdCard
     job: NCRMilitaryPoliceSergeant
@@ -103,9 +103,9 @@
 - type: entity
   parent: N14IDNCRDogtagNCO
   id: N14IDNCRDogtagMPCaptain
-  name: military police captain's dogtags
-  description: An ID dogtag worn by NCR military police captains.
-  suffix: Military Police Captain
+  name: military police first lieutenant's dogtags
+  description: An ID dogtag worn by NCR military police first lieutenants.
+  suffix: Military Police First Lieutenant
   components:
   - type: PresetIdCard
     job: NCRMilitaryPoliceCaptain

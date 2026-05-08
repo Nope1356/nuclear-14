@@ -340,7 +340,11 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
             if (!sprite.LayerMapTryGet(layerId, out _))
             {
-                var layer = sprite.AddLayer(markingSprite, targetLayer + j + 1);
+                // RenderOverClothing: append at the very end of the layer stack so the marking
+                // renders above all clothing/armor bookmarks that were registered at entity creation.
+                var layer = markingPrototype.RenderOverClothing
+                    ? sprite.AddLayer(markingSprite)
+                    : sprite.AddLayer(markingSprite, targetLayer + j + 1);
                 sprite.LayerMapSet(layerId, layer);
                 sprite.LayerSetSprite(layerId, rsi);
             }

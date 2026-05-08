@@ -152,7 +152,8 @@ public sealed partial class MarkingPicker : Control
             var category = _markingCategories[i];
             var markings = GetMarkings(category);
             if (_ignoreCategories.Contains(category) ||
-                markings.Count == 0)
+                markings.Count == 0 ||
+                markings.Values.All(m => m.Hidden))
             {
                 continue;
             }
@@ -211,8 +212,9 @@ public sealed partial class MarkingPicker : Control
         _selectedUnusedMarking = null;
 
         var sortedMarkings = GetMarkings(_selectedMarkingCategory).Values.Where(m =>
-            m.ID.ToLower().Contains(filter.ToLower()) ||
-            GetMarkingName(m).ToLower().Contains(filter.ToLower())
+            !m.Hidden &&
+            (m.ID.ToLower().Contains(filter.ToLower()) ||
+            GetMarkingName(m).ToLower().Contains(filter.ToLower()))
         ).OrderBy(p => GetMarkingName(p)); // #Misfits Change - removed double Loc.GetString() call
 
         foreach (var marking in sortedMarkings)

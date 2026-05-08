@@ -4,7 +4,8 @@ on:
   pull_request_target:
     paths:
       - '**.rsi/**.png'
-
+permissions:
+  pull-requests: write
 jobs:
   diff:
     name: Diff

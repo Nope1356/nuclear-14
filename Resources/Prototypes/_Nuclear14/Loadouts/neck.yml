@@ -143,3 +143,94 @@
       - NCRPisoner
    items:
      - N14ClothingNeckShawl
+
+ - type: loadout
+   id: ClothingNeckScarfStripedRed
+   category: Accessories
+   cost: 2
+   exclusive: true
+   customColorTint: true
+   requirements:
+     - !type:CharacterItemGroupRequirement
+       group: N14LoadoutNeck
+     - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+   items:
+     - ClothingNeckScarfStripedRed
+
+ - type: loadout
+   id: ClothingNeckScarfStripedBlue
+   category: Accessories
+   cost: 2
+   exclusive: true
+   customColorTint: true
+   requirements:
+     - !type:CharacterItemGroupRequirement
+       group: N14LoadoutNeck
+     - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+   items:
+     - ClothingNeckScarfStripedBlue
+
+ - type: loadout
+   id: ClothingNeckScarfStripedGreen
+   category: Accessories
+   cost: 2
+   exclusive: true
+   customColorTint: true
+   requirements:
+     - !type:CharacterItemGroupRequirement
+       group: N14LoadoutNeck
+     - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+   items:
+     - ClothingNeckScarfStripedGreen
+
+ - type: loadout
+   id: ClothingNeckScarfStripedBrown
+   category: Accessories
+   cost: 2
+   exclusive: true
+   customColorTint: true
+   requirements:
+     - !type:CharacterItemGroupRequirement
+       group: N14LoadoutNeck
+     - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+   items:
+     - ClothingNeckScarfStripedBrown
+
+ - type: loadout
+   id: ClothingNeckScarfStripedLightBlue
+   category: Accessories
+   cost: 2
+   exclusive: true
+   customColorTint: true
+   requirements:
+     - !type:CharacterItemGroupRequirement
+       group: N14LoadoutNeck
+     - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+   items:
+     - ClothingNeckScarfStripedLightBlue
+

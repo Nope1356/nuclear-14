@@ -26,6 +26,9 @@
     - RobotRobobrain # #Misfits Fix - missing robot chassis
     - RobotRobobrainLaser # #Misfits Fix - missing variant species
     - SuperMutant
+    - C27
+    - C27NCR
+    - C27BoS
   special:
   - !type:AddComponentSpecial
     components:

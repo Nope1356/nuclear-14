@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Shared.Construction.Conditions;
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
@@ -58,6 +59,12 @@ public sealed partial class ConstructionPrototype : IPrototype
     /// </summary>
     [DataField("layers")]
     private List<SpriteSpecifier>? _layers;
+
+    /// <summary>
+    ///     Misfits Add: Makes it so the construction and placement ghosts are offsetted just copy the offset of the prototpe sprite.
+    /// </summary>
+    [DataField("offset")]
+    public Vector2 Offset = new Vector2(0);
 
     /// <summary>
     ///     If you can start building or complete steps on impassable terrain.

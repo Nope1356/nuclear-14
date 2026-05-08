@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Beepbopbopedy",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "stage_one",
+            "directions": 4
+        },
+        {
+            "name": "stage_two",
+            "directions": 4
+        },
+        {
+            "name": "stage_three",
+            "directions": 4
+        }
+    ]
+}

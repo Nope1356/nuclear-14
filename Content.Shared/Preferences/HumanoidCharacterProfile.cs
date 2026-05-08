@@ -538,6 +538,11 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             _ => PreferenceUnavailableMode.StayInLobby // Invalid enum values.
         };
 
+        // #Misfits Change - species with RestrictedJobs must never fall through to an overflow job
+        // (e.g. Wastelander). Force StayInLobby so AssignOverflowJobs skips them entirely.
+        if (speciesPrototype.RestrictedJobs != null)
+            prefsUnavailableMode = PreferenceUnavailableMode.StayInLobby;
+
         var spawnPriority = SpawnPriority switch
         {
             SpawnPriorityPreference.None => SpawnPriorityPreference.None,
@@ -557,6 +562,18 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
                 JobPriority.High => true,
                 _ => false
             }));
+
+        // #Misfits Change - if this species has a restricted job list but the player hasn't
+        // explicitly queued any of them, auto-promote all restricted jobs to High so the
+        // assignment algorithm always has a valid target and the player isn't stranded.
+        if (speciesPrototype.RestrictedJobs is { Count: > 0 } && priorities.Count == 0)
+        {
+            foreach (var restrictedJobId in speciesPrototype.RestrictedJobs)
+            {
+                if (prototypeManager.TryIndex<JobPrototype>(restrictedJobId, out var job) && job.SetPreference)
+                    priorities[restrictedJobId] = JobPriority.High;
+            }
+        }
 
         var antags = AntagPreferences
             .Where(id => prototypeManager.TryIndex<AntagPrototype>(id, out var antag) && antag.SetPreference)

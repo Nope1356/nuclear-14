@@ -31,7 +31,7 @@
     - ClothingMaskBear
 
 - type: loadout
-  id: ClothingMaskBee
+  id: ClothingMaskFox
   category: Mask
   cost: 2
   requirements:
@@ -45,6 +45,22 @@
       - NCRPisoner
   items:
     - ClothingMaskFox
+
+- type: loadout
+  id: ClothingMaskBee
+  category: Mask
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMask
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+  items:
+    - ClothingMaskBee
 
 - type: loadout
   id: ClothingMaskJackal

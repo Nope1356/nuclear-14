@@ -39,7 +39,7 @@
 <li>Use [bold]bold[/bold] for labels and command verbs.</li>
 <li>Use [italic]italic[/italic] for tone, caveats, or secondary emphasis.</li>
 <li>Use [color=#caa468]accent color[/color] sparingly for highlights inside body text.</li>
-<li>Use [textlink="guide links" link="MisfitsGuidebookTemplate"] or [textlink="external links" link="https://ss14.misfitsystems.net/wiki/index.php/Main_Page"] inside paragraphs, not as layout elements.</li>
+<li>Use [textlink="guide links" link="MisfitsGuidebookTemplate"] or [textlink="external links" link="https://wiki.misfitsystems.net/index.php/Main_Page"] inside paragraphs, not as layout elements.</li>
 </ul>
 </GuideSection>
 </GuidePage>

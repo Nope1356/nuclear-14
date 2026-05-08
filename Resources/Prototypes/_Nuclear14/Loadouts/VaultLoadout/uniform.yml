@@ -117,3 +117,20 @@
         - VaultDweller
   items:
   - N14ClothingUniformJumpsuitPreWarLumberjack
+
+- type: loadout
+  id: ClothingUniformJumpsuitOliveSweaterVault
+  category: Uniform
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Vault 
+      min: 1500  # 25 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - VaultDweller
+  items:
+  - ClothingUniformJumpsuitOliveSweater

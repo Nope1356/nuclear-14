@@ -1,0 +1,27 @@
+- type: entity
+  parent: N14ClothingHeadHatCombatHelmet
+  id: FalloutNCRmilitarypoliceHelmet
+  name: NCR Military Police Helmet
+  description: A helmet worn by the NCR Military Police.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Head/FalloutHelmets/falloutNCRmilitarypolicehelmet.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Head/FalloutHelmets/falloutNCRmilitarypolicehelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.90
+        Piercing: 0.90
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MisfitsClothingHeadAntlerSkull
+  name: antler skullcap
+  description: An antler skull headdress traditionally worn by the spiritually inclined.
+  components:
+  - type: Sprite
+    sprite: _Misfits\Clothing\Head\antlerhelm.rsi
+  - type: Clothing
+    sprite: _Misfits\Clothing\Head\antlerhelm.rsi

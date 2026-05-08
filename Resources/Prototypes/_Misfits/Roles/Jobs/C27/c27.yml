@@ -49,7 +49,7 @@
     components:
       - type: NpcFactionMember
         factions:
-          - PlayerRobot
+          - Wastelander
 
 # --- NCR variant ---------------------------------------------------------------------
 - type: job
@@ -81,7 +81,7 @@
     components:
       - type: NpcFactionMember
         factions:
-          - PlayerRobot
+          - NCR
 
 # --- Brotherhood of Steel variant ----------------------------------------------------
 - type: job
@@ -111,7 +111,7 @@
     components:
       - type: NpcFactionMember
         factions:
-          - PlayerRobot
+          - BrotherhoodOfSteel
 
 # Starting gear, one per job. Faction kits open an UndecidedLoadoutBackpack UI that
 # now offers Light only — Medium / Heavy variants are obtained by crafting at an armor

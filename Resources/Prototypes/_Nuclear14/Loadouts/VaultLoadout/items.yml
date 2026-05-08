@@ -1,1 +1,85 @@
-# Planning to add items soon in the future, but for now this just exists here.
+- type: loadout
+  id: ClothingEyesGlassesHipsterVault
+  category: Accessories
+  cost: 2
+  requirements:
+   - !type:CharacterPlaytimeRequirement
+      tracker: VaultDweller
+      min: 1200 # 20 hours
+   - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+   - !type:CharacterJobRequirement
+       jobs:
+       - VaultDweller
+       - Overseer
+       - VaultEngineer
+       - VaultDoctor
+  items:
+    - ClothingEyesGlassesHipster
+
+- type: loadout
+  id: CaneVault
+  category: Items
+  cost: 2
+  requirements:
+   - !type:CharacterDepartmentRequirement
+       departments:
+       - Vault
+  items:
+    - Cane
+
+- type: loadout
+  id: SmokingPipeFilledTobaccoVault
+  category: Items
+  cost: 2
+  requirements:
+   - !type:CharacterPlaytimeRequirement
+      tracker: Overseer
+      min: 1200 # 20 hours
+   - !type:CharacterJobRequirement
+       jobs:
+       - Overseer
+  items:
+    - SmokingPipeFilledTobacco
+
+- type: loadout
+  id: WhistleVault
+  category: Items
+  cost: 1
+  requirements:
+   - !type:CharacterJobRequirement
+       jobs:
+       - Overseer
+  items:
+    - Whistle
+
+- type: loadout
+  id: ClothingShoesBootsLaceupVault
+  category: Shoes
+  cost: 2
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Vault 
+      min: 1500  # 25 hours
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutShoes
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultDweller
+       - Overseer
+       - VaultDoctor
+  items:
+    - ClothingShoesBootsLaceup
+
+- type: loadout
+  id: ClothingMaskGasMinerVault
+  category: Accessories
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement
+       jobs:
+       - VaultEngineer
+  items:
+    - ClothingMaskGasMiner

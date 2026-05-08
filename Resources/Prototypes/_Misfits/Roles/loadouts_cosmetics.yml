@@ -9,6 +9,10 @@
   cost: 2
   exclusive: true
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutNeck
     - !type:CharacterJobRequirement
@@ -130,6 +134,10 @@
   cost: 2
   exclusive: true
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutNeck
     - !type:CharacterJobRequirement
@@ -186,7 +194,7 @@
 
 - type: loadout
   id: MisfitsLoadoutHandsBlackBiker
-  category: Accessories
+  category: Hands
   cost: 1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -202,7 +210,7 @@
 
 - type: loadout
   id: MisfitsLoadoutHandsBrownBiker
-  category: Accessories
+  category: Hands
   cost: 1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -218,9 +226,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHandsMountie
-  category: Accessories
+  category: Hands
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutHands
     - !type:CharacterJobRequirement
@@ -234,7 +246,7 @@
 
 - type: loadout
   id: MisfitsLoadoutHandsCombat
-  category: Accessories
+  category: Hands
   cost: 1
   requirements:
     - !type:CharacterItemGroupRequirement
@@ -245,46 +257,53 @@
         - BoSMidSerf
         - CaesarLegionSlave
         - NCRPisoner
+        - VaultDweller  
+        - VaultEngineer
+        - Overseer
   items:
     - N14ClothingHandsGlovesCombat
+# There are already Nitirle gloves in the loadout literally no point for another to exist
+#- type: loadout
+#  id: MisfitsLoadoutHandsNitrile
+#  category: Accessories
+#  cost: 1
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: N14LoadoutHands
+#    - !type:CharacterJobRequirement
+#      inverted: true
+#      jobs:
+#        - BoSMidSerf
+#        - CaesarLegionSlave
+#        - NCRPisoner
+#  items:
+#   - N14ClothingHandsGlovesNitrile
 
-- type: loadout
-  id: MisfitsLoadoutHandsNitrile
-  category: Accessories
-  cost: 1
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: N14LoadoutHands
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - BoSMidSerf
-        - CaesarLegionSlave
-        - NCRPisoner
-  items:
-    - N14ClothingHandsGlovesNitrile
-
-- type: loadout
-  id: MisfitsLoadoutHandsNitrilePurple
-  category: Accessories
-  cost: 1
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: N14LoadoutHands
-    - !type:CharacterJobRequirement
-      inverted: true
-      jobs:
-        - BoSMidSerf
-        - CaesarLegionSlave
-        - NCRPisoner
-  items:
-    - N14ClothingHandsGlovesNitrilePurple
+#- type: loadout
+# id: MisfitsLoadoutHandsNitrilePurple
+#  category: Accessories
+#  cost: 1
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: N14LoadoutHands
+#    - !type:CharacterJobRequirement
+#      inverted: true
+#      jobs:
+#        - BoSMidSerf
+#        - CaesarLegionSlave
+#        - NCRPisoner
+# items:
+#    - N14ClothingHandsGlovesNitrilePurple
 
 - type: loadout
   id: MisfitsLoadoutHandsPatrol
-  category: Accessories
+  category: Hands
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutHands
     - !type:CharacterJobRequirement
@@ -359,9 +378,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadWoodBoonie
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -373,9 +396,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadWinterBoonie
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -387,9 +414,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadDesertBoonie
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -401,9 +432,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadArmyBeret
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -415,9 +450,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadArmyBeretAirborne
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -429,9 +468,13 @@
 
 - type: loadout
   id: MisfitsLoadoutHeadArmyBeretSpecial
-  category: Accessories
+  category: Head
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:
@@ -725,7 +768,7 @@
 
 - type: loadout
   id: MisfitsLoadoutShoesJamrock
-  category: Accessories
+  category: Shoes
   cost: 1
   requirements:
     - !type:CharacterJobRequirement
@@ -734,14 +777,21 @@
         - BoSMidSerf
         - CaesarLegionSlave
         - NCRPisoner
+        - VaultDoctor
+        - VaultSecurity
+        - VaultEngineer
   items:
     - N14ClothingShoesJamrock
 
 - type: loadout
   id: MisfitsLoadoutShoesLeatherBoots
-  category: Accessories
+  category: Shoes
   cost: 1
   requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
     - !type:CharacterJobRequirement
       inverted: true
       jobs:

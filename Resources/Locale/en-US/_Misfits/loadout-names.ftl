@@ -23,6 +23,7 @@ loadout-name-N14ClothingBackpackSatchelMilitary = military satchel
 loadout-name-N14ClothingBackpackSatchelTrekker = trekker satchel
 
 # Uniforms
+loadout-name-ClothingUniformJumpsuitOliveSweaterVault = olive sweater
 loadout-name-N14LoadoutUniformJumpsuitPreWarLumberjackVault = pre-war lumberjack outfit
 loadout-name-N14LoadoutUniformJumpsuitBlueSuitVault = blue suit
 loadout-name-N14LoadoutUniformJumpsuitPreWarManagerVault = pre-war manager outfit
@@ -74,11 +75,15 @@ loadout-name-N14LoadoutUniformJumpskirtDressLongSleeve = long sleeve dress
 loadout-name-N14LoadoutUniformJumpskirtDressFormalRed = formal red dress
 
 # Outer clothing
+loadout-name-N14ClothingOuterPoliceVestVault = pre-war police vest
+loadout-name-N14ClothingOuterBosScribeVault = technical leather vest
+loadout-name-ClothingOuterCoatJensenVault = jensen coat
+loadout-name-ClothingOuterCoatTrenchVault = trench coat
 loadout-name-ClothingOuterDenimJacketVault = denim jacket
 loadout-name-N14LoadoutOuterCoatLeatherJacket = leather jacket
 loadout-name-N14LoadoutOuterCoatLeatherJacketVault = leather jacket
 loadout-name-ClothingOuterCoatGentleVault = gentle coat
-loadout-name-ClothingOuterCoatDetectiveVault = detective coat
+loadout-name-ClothingOuterCoatInspector = detective coat
 loadout-name-N14ClothingOuterJacketBomberVault = bomber jacket 
 loadout-name-N14LoadoutOuterCoatLeatherDuster = leather duster
 loadout-name-N14LoadoutOuterCoatBattlecoat = battlecoat
@@ -116,6 +121,7 @@ loadout-name-N14ClothingOuterhunter = hunter outfit
 loadout-name-N14ClothingOuterheadtaker = headtaker outfit
 
 # Shoes
+loadout-name-ClothingShoesBootsLaceupVault = laceup shoes
 loadout-name-N14LoadoutShoesBlack = black shoes
 loadout-name-N14LoadoutShoesBrown = brown shoes
 loadout-name-N14LoadoutBootsBlack = black boots
@@ -152,6 +158,7 @@ loadout-name-N14ClothingTribalShamanHat = shaman hat
 loadout-name-N14ClothingTribalMuffaloskull = muffalo skull
 
 # Eyes
+loadout-name-ClothingEyesGlassesHipsterVault = hipster glasses
 loadout-name-N14LoadoutEyesEyepatch = eyepatch
 loadout-name-N14ClothingEyesGlasses = glasses
 loadout-name-N14ClothingEyesGlassesWelding = welding glasses
@@ -168,6 +175,11 @@ loadout-name-N14LoadoutHandsGlovesNitrile = nitrile gloves
 loadout-name-N14LoadoutHandsGlovesNitrilePurple = nitrile gloves (purple)
 
 # Neck
+loadout-name-ClothingNeckScarfStripedLightBlue = striped lightblue scarf
+loadout-name-ClothingNeckScarfStripedBrown = striped brown scarf
+loadout-name-ClothingNeckScarfStripedGreen = striped green scarf
+loadout-name-ClothingNeckScarfStripedBlue = striped blue scarf
+loadout-name-ClothingNeckScarfStripedRed = striped red scarf
 loadout-name-N14LoadoutNeckMantleLeather = leather mantle
 loadout-name-N14LoadoutNeckCloakLeather = leather cloak
 loadout-name-N14LoadoutNeckCloakDarkCloak = dark cloak
@@ -181,6 +193,8 @@ loadout-name-ClothingNeckCrucifixColor = crucifix (colorable)
 loadout-name-N14LoadoutBeltUtility = utility belt
 
 # Masks
+loadout-name-ClothingMaskGasMinerVault = miner gas mask
+loadout-name-ClothingMaskFox = fox mask
 loadout-name-ClothingMaskBear = bear mask
 loadout-name-ClothingMaskBat = bat mask
 loadout-name-ClothingMaskBee = bee mask
@@ -191,6 +205,9 @@ loadout-name-ClothingMaskBreather = breather mask
 loadout-name-ClothingMaskWhiteBalaclava = white balaclava
 
 # Items
+loadout-name-WhistleVault = whistle
+loadout-name-SmokingPipeFilledTobaccoVault = pipe
+loadout-name-CaneVault = cane
 loadout-name-N14LoadoutItemWallet = wallet
 loadout-name-N14LoadoutItemCanteen = canteen
 loadout-name-N14LoadoutItemFlask = flask
@@ -389,6 +406,7 @@ loadout-name-LoadoutLegionVenatorLightReconnaissanceArmor = Legion venator light
 loadout-name-LoadoutLegionCloakBlack = Legion black cloak
 loadout-name-LoadoutNeckCloakLegionWhite = Legion white cloak
 loadout-name-LoadoutNeckCloakLegionRed = Legion red cloak
+loadout-name-LoadoutLegionPrimeHeavyArmor = Legion Gravis pattern armor
 
 # Miscellaneous eyes
 loadout-name-ClothingEyesGlassesChemist = chemist glasses

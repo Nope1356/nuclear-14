@@ -41,6 +41,20 @@ namespace Content.Shared.Humanoid.Markings
         [DataField("sprites", required: true)]
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
+        /// <summary>
+        /// When true, this marking's sprite layers are appended to the very end of the entity's
+        /// sprite layer stack, rendering above all clothing and armor.
+        /// </summary>
+        [DataField]
+        public bool RenderOverClothing { get; private set; }
+
+        /// <summary>
+        /// When true, this marking is hidden from the character creator UI entirely.
+        /// Use for system-applied markings that players should never select manually.
+        /// </summary>
+        [DataField]
+        public bool Hidden { get; private set; }
+
         public Marking AsMarking()
         {
             return new Marking(ID, Sprites.Count);

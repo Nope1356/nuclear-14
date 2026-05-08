@@ -33,7 +33,7 @@ namespace Content.Client.Info
             AddInfoButton("server-info-website-button", CCVars.InfoLinksWebsite);
             // #Misfits Change - Keep a visible Wiki button in round-start lobby that opens the canonical Misfits wiki URL.
             var wikiButton = new Button { Text = Loc.GetString("server-info-wiki-button") };
-            wikiButton.OnPressed += _ => uriOpener.OpenUri("https://ss14.misfitsystems.net/wiki/index.php/Main_Page");
+            wikiButton.OnPressed += _ => uriOpener.OpenUri("https://wiki.misfitsystems.net/index.php/Main_Page");
             buttons.AddChild(wikiButton);
             AddInfoButton("server-info-forum-button", CCVars.InfoLinksForum);
 

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Content.Shared.Construction.Prototypes;
+using Robust.Client.GameObjects;
 using Robust.Client.Placement;
 using Robust.Client.Utility;
 using Robust.Shared.Map;
@@ -46,6 +47,17 @@ namespace Content.Client.Construction
         {
             base.StartHijack(manager);
             manager.CurrentTextures = _prototype?.Layers.Select(sprite => sprite.DirFrame0()).ToList();
+
+            // Misfits Add: Offsets the placement ghost entity apparently its different from the construction ghost.
+            if (_prototype != null && manager.CurrentPlacementOverlayEntity is { } overlayEnt)
+            {
+                var entManager = IoCManager.Resolve<IEntityManager>();
+                if (entManager.TryGetComponent<SpriteComponent>(overlayEnt, out var sprite))
+                {
+                    sprite.Offset = _prototype.Offset;
+                }
+            }
+            // Misfits End
         }
     }
 }

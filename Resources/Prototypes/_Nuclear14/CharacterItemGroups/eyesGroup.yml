@@ -13,3 +13,9 @@
       id: MisfitsLoadoutEyesPilotGoggles # #Misfits Add - cosmetic pilot goggles
     - type: loadout
       id: MisfitsLoadoutEyesGoggles # #Misfits Add - cosmetic goggles
+    - type: loadout
+      id: ClothingEyesGlassesHipsterVault
+    - type: loadout
+      id: ClothingMaskGasMinerVault
+    - type: loadout
+      id: ClothingEyesGlassesChemist
