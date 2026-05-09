@@ -39,6 +39,7 @@
   id: SuperMutantVaultSuitGear
   equipment:
     jumpsuit: ClothingSuperMutantVaultSuit
+    id: N14ClothingNeckDogtags # #Misfits Change - wastelander supermutants get dogtag IDs
 
 # #Misfits Add - Nightkin variant with its own whitelist entry.
 - type: job
