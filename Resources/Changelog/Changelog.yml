@@ -4712,3 +4712,10 @@ Entries:
   id: 5847
   time: '2026-05-09T20:09:12.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/458
+- author: Misterzeppelin
+  changes:
+    - type: Add
+      message: dogtag IDs for unfactioned supermutants
+  id: 5848
+  time: '2026-05-10T01:31:02.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/457
