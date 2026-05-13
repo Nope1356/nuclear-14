@@ -22,7 +22,7 @@
           - Rangers
   requirements:
     - !type:CharacterDepartmentTimeRequirement
-      department: NCR
+      department: Rangers
       min: 57600 # 16 hours
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots, super mutants, and glowing ghouls cannot be Rangers
       inverted: true
