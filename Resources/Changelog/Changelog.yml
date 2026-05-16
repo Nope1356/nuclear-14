@@ -5179,3 +5179,10 @@ Entries:
   id: 5896
   time: '2026-05-16T02:05:09.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/528
+- author: pierow
+  changes:
+    - type: Tweak
+      message: 'Changed how binoculars works: Better zoom and far less delay! '
+  id: 5897
+  time: '2026-05-16T03:43:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/525
