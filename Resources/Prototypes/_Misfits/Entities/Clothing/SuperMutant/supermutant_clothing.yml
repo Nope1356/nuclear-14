@@ -400,7 +400,7 @@
   parent: ClothingHeadBase
   id: ClothingSuperMutantSkullHelmetTribal
   name: super mutant muffolo skull
-  description: A crude helmet assembled from scrap metal and leather, shaped to fit a super mutant's oversized skull.
+  description: A skull made from a giant muffolo, oversized for a normal person, just right for a supermutant.
   components:
   - type: Sprite
     sprite: _Misfits/Clothing/SuperMutant/supermutant_muffolo_skull.rsi
