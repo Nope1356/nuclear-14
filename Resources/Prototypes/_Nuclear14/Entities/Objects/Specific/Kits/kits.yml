@@ -1161,7 +1161,7 @@
       - id: N14BoxCardboardMREBoxKFilled
       - id: N14WeaponLaserPistol
       - id: N14PowerCellSmall
-      amount: 2
+        amount: 2
 
 # MBoS Scribe Engineer Kit
 - type: entity
